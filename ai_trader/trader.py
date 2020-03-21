@@ -112,4 +112,4 @@ class Trading:
 
 if __name__ == '__main__':
     trading = Trading()
-    trading.transaction('AAPL')
+    trading.transaction('AAPL');

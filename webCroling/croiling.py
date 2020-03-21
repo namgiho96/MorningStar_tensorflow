@@ -37,8 +37,7 @@ class Croiling:
         df['일자'] = pd.to_datetime(df['일자'].str[:4] + '-' + df['일자'].str[4:6] + '-' + df['일자'].str[6:])
         df.set_index(df['일자'], inplace=True)
         df = df.drop(columns='일자')
-        print(f'{df.head()}')
-
+        df.to_csv('samsungOHLC.csv')
         print('작동소요시간 :', round(time.time() - ts, 1), '초')
 
 
